@@ -7,6 +7,7 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 const dotenv = require("dotenv");
 dotenv.config()
+const port=process.env.PORT || 4000
 
 dbConnect();
 app.use(express.json());
@@ -18,6 +19,6 @@ app.use(express.static(path.resolve() + "/public"));
 app.use("/", userRoute);
 
 
-app.listen(4000, () => {
-  console.log("Server running  on http://localhost:4000");
+app.listen(port, () => {
+  console.log("Server running  on http://localhost:"+port);
 });

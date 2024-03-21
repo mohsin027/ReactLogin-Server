@@ -144,7 +144,7 @@ module.exports = {
         newUser = await userModel.create({
           email: user.email,
           image: { url: user.picture, secure_url: user.picture },
-          fullName: user.name,
+          name: user.name,
         });
       } 
 
